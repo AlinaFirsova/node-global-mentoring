@@ -4,11 +4,16 @@
   "description": "",
   "main": "",
   "scripts": {
-    "test": "jest",
+    "test": "jest --testPathPattern='(unit|integration).test.ts$'",
+    "test:e2e": "jest --testPathPattern=e2e.test.ts$",
     "test:coverage": "jest --coverage"
   },
   "author": "",
   "license": "ISC",
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
   "devDependencies": {
     "@types/jest": "^29.0.0",
     "@types/node": "^18.7.16",
